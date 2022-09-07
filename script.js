@@ -59,3 +59,49 @@ while(SceltaUtente !== 'pari' && SceltaUtente !== 'dispari'){
           SceltaUtente = SceltaUtente.toLowerCase();
      }  
 }
+
+
+
+
+// chiedo all'utente un numero tra 1 e 5
+
+let number = 0;
+
+while (isNaN(number) || number < 1 || number > 5){
+    number = parseInt(prompt('Scrivi un numero tra 1 e 5'));
+}
+
+
+// generiamo un numero 
+const numberPC = getRandomNumber(1, 5);
+
+// sommiamo 
+
+const sum = number + numberPC;
+
+
+// verifichiamo se la somma è pari o dispari
+const pariODispari = isOddOrEven(sum) ? 'pari' : 'dispari';;
+
+
+// dichiariamo chi ha vinto
+if(SceltaUtente === pariODispari){
+    console.log(SceltaUtente, sum, 'hai vinto!');
+}else{
+    console.log(SceltaUtente, sum, 'hai perso!');
+}
+
+
+function getRandomNumber(min, max){
+    const range = max - min + 1
+
+    const random = Math.floor(Math.random() * range) + min;
+
+    return random;
+
+}
+
+function isOddOrEven(numberToCheck){
+    return ( numberToCheck % 2 === 0 ) 
+}
+

@@ -41,3 +41,13 @@ function checkPalindroma(text){
     return isEqual;
 
 }
+
+
+
+
+
+
+
+
+// PARI O DISPARI           Altro esercizio
+

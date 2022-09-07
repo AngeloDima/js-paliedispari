@@ -51,3 +51,11 @@
 
 // PARI O DISPARI           Altro esercizio
 
+let SceltaUtente = '';
+
+while(SceltaUtente !== 'pari' && SceltaUtente !== 'dispari'){ 
+     SceltaUtente = prompt('Pari o dispari?'); 
+     if (SceltaUtente !== undefined){
+          SceltaUtente = SceltaUtente.toLowerCase();
+     }  
+}
